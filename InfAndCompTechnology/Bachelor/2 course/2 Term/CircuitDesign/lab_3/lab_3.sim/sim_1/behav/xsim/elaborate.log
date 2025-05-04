@@ -12,7 +12,7 @@ Compiling module xil_defaultlib.PS2_design
 Compiling module xil_defaultlib.PS2_DC
 Compiling module xil_defaultlib.PS2_manager
 Compiling module xil_defaultlib.Division
-Compiling module xil_defaultlib.clk_div
+Compiling module xil_defaultlib.DIVIDER(DIVISOR=2)
 Compiling module xil_defaultlib.SevenSegmentLED
 Compiling module xil_defaultlib.main
 Compiling module xil_defaultlib.test

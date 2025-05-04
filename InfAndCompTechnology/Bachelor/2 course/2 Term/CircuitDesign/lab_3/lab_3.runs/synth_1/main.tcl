@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.runs/synth_1/main.tcl"
+  variable script "D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.runs/synth_1/main.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,29 +70,29 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.cache/wt} [current_project]
-set_property parent.project_path {C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.xpr} [current_project]
+set_property webtalk.parent_dir {D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.cache/wt} [current_project]
+set_property parent.project_path {D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo {c:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.cache/ip} [current_project]
+set_property ip_output_repo {d:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  {C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/Division.v}
-  {C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/FILTER.v}
-  {C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_DC.v}
-  {C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_design.v}
-  {C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v}
-  {C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/SevenSegmentLED.v}
-  {C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/clk_div.v}
-  {C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v}
+  {D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/DIVIDER.v}
+  {D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/Division.v}
+  {D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_DC.v}
+  {D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_design.v}
+  {D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v}
+  {D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/SevenSegmentLED.v}
+  {D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v}
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -103,7 +103,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc {{D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/constrs_1/new/constr.xdc}}
+set_property used_in_implementation false [get_files {{D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/constrs_1/new/constr.xdc}}]
+
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental {D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/utils_1/imports/synth_1/main.dcp}
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

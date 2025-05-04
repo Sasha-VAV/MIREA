@@ -1,11 +1,11 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
+"../../../../lab_3.srcs/sources_1/new/DIVIDER.v" \
 "../../../../lab_3.srcs/sources_1/new/Division.v" \
 "../../../../lab_3.srcs/sources_1/new/PS2_DC.v" \
 "../../../../lab_3.srcs/sources_1/new/PS2_design.v" \
 "../../../../lab_3.srcs/sources_1/new/PS2_manager.v" \
 "../../../../lab_3.srcs/sources_1/new/SevenSegmentLED.v" \
-"../../../../lab_3.srcs/sources_1/new/clk_div.v" \
 "../../../../lab_3.srcs/sources_1/new/main.v" \
 "../../../../lab_3.srcs/sim_1/new/test.v" \
 

@@ -2,11 +2,6 @@
 *** Running vivado
     with args -log main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
 
-!! WARNING !!
-"PYTHONPATH" variable is set greater than default max string limit of "519" characters.
-Please ignore this, if you have already made changes to your system registry to accept more than
-default limit of 519 characters.
-!! WARNING !!
 
 
 ****** Vivado v2022.2 (64-bit)
@@ -15,64 +10,92 @@ default limit of 519 characters.
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source main.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 378.684 ; gain = 60.719
+Command: read_checkpoint -auto_incremental -incremental {D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/utils_1/imports/synth_1/main.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/utils_1/imports/synth_1/main.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top main -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 2872
-INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Users/vav11/Downloads/Xilinx_Windows_Unpacked_2022_2/Xilinx_Windows_Unpacked_2022_2/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-7075] Helper process launched with PID 48068
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/study/Xilinx_Windows_Unpacked_2022_2/Xilinx_Windows_Unpacked_2022_2/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 817.188 ; gain = 413.664
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1207.941 ; gain = 408.301
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'main' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v:2]
-INFO: [Synth 8-6157] synthesizing module 'FILTER' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/FILTER.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'FILTER' (0#1) [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/FILTER.v:2]
-INFO: [Synth 8-6157] synthesizing module 'PS2_manager' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:2]
-INFO: [Synth 8-6157] synthesizing module 'PS2_design' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_design.v:2]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_design.v:62]
-INFO: [Synth 8-6155] done synthesizing module 'PS2_design' (0#1) [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_design.v:2]
-INFO: [Synth 8-6157] synthesizing module 'PS2_DC' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_DC.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'PS2_DC' (0#1) [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_DC.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'PS2_manager' (0#1) [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:2]
-INFO: [Synth 8-6157] synthesizing module 'Division' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/Division.v:2]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/Division.v:42]
-INFO: [Synth 8-6155] done synthesizing module 'Division' (0#1) [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/Division.v:2]
-INFO: [Synth 8-6157] synthesizing module 'clk_div' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/clk_div.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'clk_div' (0#1) [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/clk_div.v:2]
-INFO: [Synth 8-6157] synthesizing module 'SevenSegmentLED' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/SevenSegmentLED.v:2]
-INFO: [Synth 8-226] default block is never used [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/SevenSegmentLED.v:35]
-INFO: [Synth 8-226] default block is never used [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/SevenSegmentLED.v:55]
-WARNING: [Synth 8-567] referenced signal 'NUMBER_SPLITTER' should be on the sensitivity list [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/SevenSegmentLED.v:33]
-INFO: [Synth 8-6155] done synthesizing module 'SevenSegmentLED' (0#1) [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/SevenSegmentLED.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'main' (0#1) [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v:2]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v-58.16 with 1st driver pin 'ps_2/out[0]' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v:58]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v-58.16 with 2nd driver pin 'GND' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v:58]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v-58.16 is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v:58]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v-41.9 with 1st driver pin 'ps_2/out[0]' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v-41.9 with 2nd driver pin 'GND' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v:41]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v-41.9 is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v-41.9 with 1st driver pin 'ps_2/R_O' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v-41.9 with 2nd driver pin 'GND' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v:41]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v-41.9 is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v:41]
+INFO: [Synth 8-6157] synthesizing module 'main' [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v:2]
+INFO: [Synth 8-6157] synthesizing module 'PS2_manager' [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:2]
+INFO: [Synth 8-6157] synthesizing module 'PS2_design' [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_design.v:2]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_design.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'PS2_design' (0#1) [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_design.v:2]
+INFO: [Synth 8-6157] synthesizing module 'PS2_DC' [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_DC.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'PS2_DC' (0#1) [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_DC.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'PS2_manager' (0#1) [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Division' [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/Division.v:2]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/Division.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'Division' (0#1) [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/Division.v:2]
+INFO: [Synth 8-6157] synthesizing module 'DIVIDER' [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/DIVIDER.v:2]
+	Parameter DIVISOR bound to: 8000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DIVIDER' (0#1) [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/DIVIDER.v:2]
+INFO: [Synth 8-6157] synthesizing module 'SevenSegmentLED' [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/SevenSegmentLED.v:2]
+INFO: [Synth 8-226] default block is never used [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/SevenSegmentLED.v:35]
+INFO: [Synth 8-226] default block is never used [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/SevenSegmentLED.v:55]
+WARNING: [Synth 8-567] referenced signal 'NUMBER_SPLITTER' should be on the sensitivity list [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/SevenSegmentLED.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'SevenSegmentLED' (0#1) [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/SevenSegmentLED.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'main' (0#1) [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/main.v:2]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 910.480 ; gain = 506.957
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1300.941 ; gain = 501.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 910.480 ; gain = 506.957
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1300.941 ; gain = 501.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1300.941 ; gain = 501.301
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1300.941 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/constrs_1/new/constr.xdc]
+Finished Parsing XDC File [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/constrs_1/new/constr.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/constrs_1/new/constr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1361.750 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1361.750 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/study/Xilinx_Windows_Unpacked_2022_2/Xilinx_Windows_Unpacked_2022_2/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1361.750 ; gain = 562.109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 910.480 ; gain = 506.957
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1361.750 ; gain = 562.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1361.750 ; gain = 562.109
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Division'
-WARNING: [Synth 8-327] inferring latch for variable 'new_state_reg' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_design.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'new_state_reg' [D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_design.v:66]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -88,9 +111,8 @@ WARNING: [Synth 8-327] inferring latch for variable 'new_state_reg' [C:/Backup/L
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Division'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 910.480 ; gain = 506.957
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1361.750 ; gain = 562.109
 ---------------------------------------------------------------------------------
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -98,18 +120,16 @@ Detailed RTL Component Info :
 +---Adders : 
 	   3 Input   10 Bit       Adders := 1     
 	   2 Input    4 Bit       Adders := 3     
-	   2 Input    3 Bit       Adders := 2     
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
+	   2 Input    3 Bit       Adders := 1     
 +---XORs : 
 	                8 Bit    Wide XORs := 1     
 +---Registers : 
 	               10 Bit    Registers := 7     
 	                8 Bit    Registers := 1     
 	                4 Bit    Registers := 3     
-	                3 Bit    Registers := 4     
-	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 12    
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 9     
 +---Muxes : 
 	   4 Input   10 Bit        Muxes := 1     
 	   3 Input   10 Bit        Muxes := 1     
@@ -117,14 +137,14 @@ Detailed RTL Component Info :
 	   9 Input   10 Bit        Muxes := 7     
 	   8 Input    8 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 7     
-	  18 Input    4 Bit        Muxes := 1     
+	  19 Input    4 Bit        Muxes := 1     
 	   9 Input    4 Bit        Muxes := 2     
 	   2 Input    3 Bit        Muxes := 5     
 	   9 Input    3 Bit        Muxes := 2     
 	   2 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 9     
+	   2 Input    1 Bit        Muxes := 10    
 	   6 Input    1 Bit        Muxes := 1     
-	  18 Input    1 Bit        Muxes := 2     
+	  19 Input    1 Bit        Muxes := 3     
 	   9 Input    1 Bit        Muxes := 9     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -138,62 +158,30 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-3332] Sequential element (ps_2/ps2/new_state_reg[2]) is unused and will be removed from module main.
-WARNING: [Synth 8-3332] Sequential element (ps_2/ps2/new_state_reg[1]) is unused and will be removed from module main.
-WARNING: [Synth 8-3332] Sequential element (ps_2/ps2/new_state_reg[0]) is unused and will be removed from module main.
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin R_O with 1st driver pin 'ps_2/R_O_reg/Q' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:58]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin R_O with 2nd driver pin 'GND' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:58]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net R_O is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:58]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[9] with 1st driver pin 'ps_2/out_reg[9]/Q' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[9] with 2nd driver pin 'GND' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net out[9] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[8] with 1st driver pin 'ps_2/out_reg[8]/Q' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[8] with 2nd driver pin 'GND' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net out[8] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[7] with 1st driver pin 'ps_2/out_reg[7]/Q' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[7] with 2nd driver pin 'GND' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net out[7] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[6] with 1st driver pin 'ps_2/out_reg[6]/Q' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[6] with 2nd driver pin 'GND' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net out[6] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[5] with 1st driver pin 'ps_2/out_reg[5]/Q' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[5] with 2nd driver pin 'GND' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net out[5] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[4] with 1st driver pin 'ps_2/out_reg[4]/Q' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[4] with 2nd driver pin 'GND' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net out[4] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[3] with 1st driver pin 'ps_2/out_reg[3]/Q' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[3] with 2nd driver pin 'GND' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net out[3] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[2] with 1st driver pin 'ps_2/out_reg[2]/Q' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[2] with 2nd driver pin 'GND' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net out[2] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[1] with 1st driver pin 'ps_2/out_reg[1]/Q' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[1] with 2nd driver pin 'GND' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net out[1] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[0] with 1st driver pin 'ps_2/out_reg[0]/Q' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin out[0] with 2nd driver pin 'GND' [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net out[0] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.srcs/sources_1/new/PS2_manager.v:57]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:25 . Memory (MB): peak = 1114.133 ; gain = 710.609
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1361.750 ; gain = 562.109
 ---------------------------------------------------------------------------------
-No constraint files found.
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1361.750 ; gain = 562.109
+---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:25 . Memory (MB): peak = 1114.133 ; gain = 710.609
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1361.750 ; gain = 562.109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:25 . Memory (MB): peak = 1114.133 ; gain = 710.609
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1361.750 ; gain = 562.109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -211,37 +199,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 1114.133 ; gain = 710.609
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1361.750 ; gain = 562.109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 1114.133 ; gain = 710.609
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1361.750 ; gain = 562.109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 1114.133 ; gain = 710.609
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1361.750 ; gain = 562.109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 1114.133 ; gain = 710.609
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1361.750 ; gain = 562.109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 1114.133 ; gain = 710.609
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1361.750 ; gain = 562.109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 1114.133 ; gain = 710.609
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1361.750 ; gain = 562.109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -258,51 +246,41 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |     8|
-|3     |LUT1   |    14|
-|4     |LUT2   |    19|
-|5     |LUT3   |     8|
-|6     |LUT4   |    15|
-|7     |LUT5   |    18|
-|8     |LUT6   |    15|
+|2     |CARRY4 |     9|
+|3     |LUT1   |     6|
+|4     |LUT2   |    24|
+|5     |LUT3   |     9|
+|6     |LUT4   |    49|
+|7     |LUT5   |    26|
+|8     |LUT6   |    55|
 |9     |FDCE   |     3|
-|10    |FDRE   |    54|
-|11    |IBUF   |     2|
-|12    |OBUF   |    16|
+|10    |FDRE   |   112|
+|11    |LD     |     3|
+|12    |IBUF   |     3|
+|13    |OBUF   |    16|
 +------+-------+------+
-
-Report Instance Areas: 
-+------+-------------------+----------------+------+
-|      |Instance           |Module          |Cells |
-+------+-------------------+----------------+------+
-|1     |top                |                |   173|
-|2     |  clk_div1         |clk_div         |    17|
-|3     |  cpu_reset_filter |FILTER          |    12|
-|4     |  del              |Division        |   104|
-|5     |  seg              |SevenSegmentLED |    19|
-+------+-------------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 1114.133 ; gain = 710.609
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1361.750 ; gain = 562.109
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 42 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 1114.133 ; gain = 710.609
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 1114.133 ; gain = 710.609
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1361.750 ; gain = 501.301
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1361.750 ; gain = 562.109
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1124.465 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1361.750 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1220.520 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1361.750 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 3 instances were transformed.
+  LD => LDCE: 3 instances
 
-Synth Design complete, checksum: bd93b382
+Synth Design complete, checksum: 2b4958e3
 INFO: [Common 17-83] Releasing license: Synthesis
-35 Infos, 6 Warnings, 42 Critical Warnings and 0 Errors encountered.
+43 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:31 . Memory (MB): peak = 1220.520 ; gain = 841.836
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-INFO: [Common 17-1381] The checkpoint 'C:/Backup/Less Important/My programs/Git/MIREA/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.runs/synth_1/main.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1361.750 ; gain = 957.539
+INFO: [Common 17-1381] The checkpoint 'D:/study/MIREA_fork/InfAndCompTechnology/Bachelor/2 course/2 Term/CircuitDesign/lab_3/lab_3.runs/synth_1/main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 23 21:17:09 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 24 18:59:48 2025...

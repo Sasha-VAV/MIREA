@@ -11,7 +11,6 @@ module main(
 wire [9:0] ps2_data_compl;
 reg [9:0] delay_data;
 wire ps2_data_ex, ps_reset;
-reg cpu_reset_out_enable = 0;
 always @(posedge clk)
 begin
     delay_data <= ps2_data_compl;
@@ -21,7 +20,7 @@ PS2_manager ps_2(
     .clk(clk),
     .PS_2_clk(PS_2_clk),
     .PS_2_data(PS_2_data),
-    .reset(cpu_reset_out_enable),
+    .reset(1'b0),
     .R_O(ps2_data_ex),
     .out(ps2_data_compl),
     .escape(ps_reset)
@@ -42,9 +41,9 @@ Division del(
 );
 
 wire clk_div_out;
-clk_div clk_div1(
+DIVIDER #(.DIVISOR(8000)) divide(
     .clk(clk),
-    .clk_div(clk_div_out)
+    .divided_clk(clk_div_out)
 );
 
 SevenSegmentLED seg(

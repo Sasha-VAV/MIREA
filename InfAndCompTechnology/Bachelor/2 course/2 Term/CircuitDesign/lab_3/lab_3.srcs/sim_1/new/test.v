@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 module test();
-reg clk = 0, pclk, pdata, reset;
+reg clk = 0, pclk, pdata;
 wire [7:0] AN;
 wire [6:0] SEG;
 reg [3:0] i = 0;
@@ -30,7 +30,6 @@ initial begin
     NUMBERS[13] = 8'h23;
     NUMBERS[14] = 8'h24;
     NUMBERS[15] = 8'h2B;
-    reset = 0;
     pdata = 1;
     pclk = 1;
     is_even = 1;
