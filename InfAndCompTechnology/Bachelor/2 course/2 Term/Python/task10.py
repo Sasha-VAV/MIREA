@@ -10,21 +10,21 @@ def remove_duplicates(data):
 
 
 def process_phone(phone_str):
-    number, name = phone_str.split('#')
+    number, name = phone_str.split("#")
     clean_num = number[3:]
     formatted_num = f"({clean_num[:3]}){clean_num[3:]}"
-    name = name[0] + "." + name[name.find(" ") + 1:]
+    name = name[0] + "." + name[name.find(" ") + 1 :]
     return formatted_num, name
 
 
 def process_value(value):
-    if '#' in value:
+    if "#" in value:
         return process_phone(value)
-    elif value == 'true':
-        return '1'
-    elif value == 'false':
-        return '0'
-    elif '%' in value:
+    elif value == "true":
+        return "1"
+    elif value == "false":
+        return "0"
+    elif "%" in value:
         return f"{float(value[:-1]) / 100:.4f}"
     return value
 
