@@ -1,0 +1,37 @@
+LTM 5 0 ; Инициализация массива [5,3,7,1,8,2,9,6,4,10] в памяти 0-9
+LTM 3 1 ;
+LTM 7 2 ;
+LTM 1 3 ;
+LTM 8 4 ;
+LTM 2 5 ;
+LTM 9 6 ;
+LTM 6 7 ;
+LTM 4 8 ;
+LTM 10 9 ;
+LTM 10 10        ; n = 10
+MTR 2 10 ; init vars: n = 10
+RTR 3 0 ; max_start = 0
+RTR 4 1 ; max_len = 1
+RTR 5 0 ; curr_start = 0
+RTR 6 1 ; curr_len = 1
+RTR 7 1 ; i = 1
+MTR 8 0 ; prev = arr[0]
+JUMP_LESS 7 2 31; loop if i >= n goto __
+MTRK 9 7 ; curr = arr[i]
+JUMP_LESS 8 9 23 ; if curr > prev
+SUM 6 1 6 ; curr_len += 1
+JMP 28 ;
+JUMP_LESS 4 6 26 ; else if max_len < curr_len
+RTR 3 5; max_start = curr_start
+RTR 4 6; max_len = curr_len
+RTR 5 7; curr_start = i
+RTR 6 1; curr_len = 1
+RTR 8 9; end if prev = curr
+SUM 7 1 7; i += 1;
+JMP 18
+JUMP_LESS 4 6 34 ; end loop if max_len < curr_len
+RTR 3 5; max_start = curr_start
+RTR 4 6; max_len = curr_len
+RTMK 0 3; res mem[0] = max_start
+RTMK 1 4; mem[1] = max_len
+NOP ;
