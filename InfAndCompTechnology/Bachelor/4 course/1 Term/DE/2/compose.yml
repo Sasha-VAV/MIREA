@@ -1,0 +1,55 @@
+name: adcm-lab
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: adcm
+      POSTGRES_PASSWORD: adcm
+      POSTGRES_DB: adcm
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports: ["5434:5432"]          # drop if you don't need host access
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U adcm -d adcm"]
+      interval: 5s
+      retries: 10
+
+  adcm:
+    image: hub.arenadata.io/adcm/adcm:2.12.0
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DB_HOST: postgres
+      DB_PORT: "5432"
+      DB_NAME: adcm
+      DB_USER: adcm
+      DB_PASS: adcm
+      LOG_LEVEL: INFO
+    ports: ["8000:8000"]
+    volumes:
+      - adcmdata:/adcm/data
+    restart: unless-stopped
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - promdata:/prometheus
+    ports: ["9090:9090"]
+
+  grafana:
+    image: grafana/grafana:latest
+    depends_on: [prometheus]
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+    volumes:
+      - ./grafana-datasource.yml:/etc/grafana/provisioning/datasources/ds.yml:ro
+      - grafanadata:/var/lib/grafana
+    ports: ["3000:3000"]
+
+volumes: {pgdata: {}, adcmdata: {}, promdata: {}, grafanadata: {}}
