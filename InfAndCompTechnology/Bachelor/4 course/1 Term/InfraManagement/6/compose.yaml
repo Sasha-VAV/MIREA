@@ -1,0 +1,38 @@
+name: "itop-and-mariadb"
+
+services:
+  itop:
+    image: vbkunin/itop:latest-base
+    ports:
+      - "8000:80"
+    volumes:
+      - ./itop/conf:/var/www/html/conf
+      - ./itop/extensions:/var/www/html/extensions
+    post_start:
+      - command: chown -R www-data:www-data /var/www/html/conf
+        user: root
+    networks:
+      - itop-network
+    depends_on:
+      - mariadb
+    restart: unless-stopped
+
+  mariadb: # db server name is 'mariadb'
+    image: mariadb:lts
+    volumes:
+      - db-data:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: itop
+      MYSQL_USER: itop
+      MYSQL_PASSWORD: itop
+      MARIADB_RANDOM_ROOT_PASSWORD: 1 # docker compose logs mariadb | grep 'GENERATED ROOT PASSWORD'
+    networks:
+      - itop-network
+    restart: unless-stopped
+
+volumes:
+  db-data:
+
+networks:
+  itop-network:
+    driver: bridge
