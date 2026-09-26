@@ -1,3 +1,4 @@
-*_input
-*_output
+*_input*
+*_output*
 *.sqlite
+small_files*
